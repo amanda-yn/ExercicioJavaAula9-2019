@@ -16,7 +16,8 @@ public class Texto {
 		return texto1.toLowerCase();
 	}
 	
-	public String quantidadeDeLetras() {
+	public int quantidadeDeLetras() {
+		//trim(texto1); excluir os espaços
 		return texto1.length();
 	}
 	
