@@ -28,11 +28,11 @@ public class Calculadora {
 	
 	public int numeroPar() {
 		if((numero1 % 2) == 0) {
-			System.out.println("O numero" + numero1 + "e par");
+			System.out.println("O numero " + numero1 + " e par");
 			return numero1;
 		}
 		else {
-			System.out.println("O numero" + numero1 + "nao e par");
+			System.out.println("O numero " + numero1 + " nao e par");
 			return 0;
 		}
 	}

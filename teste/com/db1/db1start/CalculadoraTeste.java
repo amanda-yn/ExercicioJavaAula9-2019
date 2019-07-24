@@ -7,7 +7,6 @@ import org.junit.Test;
 public class CalculadoraTeste {
 	
 	private Calculadora calculadora;
-
 	
 	@Before 
 	public void setUp() {
@@ -53,13 +52,7 @@ public class CalculadoraTeste {
 	@Test
 	public void deveMostrarQuantidadeNumerosImpares() {		//Testando quantidade de numeros impares
 		int quantidadeDeImpares = calculadora.quantidadeDeImpares();
-		int contador = 0;
-		for(int i = 20; i<=100 ; i++) {
-			if((i % 2) != 0) {
-				contador++;
-			}
-		}
-		Assert.assertEquals(contador, quantidadeDeImpares); 
+		Assert.assertEquals(40, quantidadeDeImpares); 
 	}
 	
 	@Test
@@ -77,7 +70,7 @@ public class CalculadoraTeste {
 	@Test
 	public void exibirMediaDeTresNumeros() { 				//Testando media de tres numeros
 		Double media = calculadora.mediaDeTresNumeros(25.5, 80.5, 45.6);
-		Assert.assertEquals(50.53, media, 00.01); 
+		Assert.assertEquals(50.53, media, 00.01); //margem de erro: 00.01
 	}
 	
 	@Test

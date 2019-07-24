@@ -5,6 +5,8 @@ public class App {
 	public static void main(String[] args) {
 		
 		//Testando no console - rascunho
+		
+		//Estanciando um objeto; Referenciando a outra classe; Chamando a classe.
 		Calculadora calculadora = new Calculadora(20, 10); 
 		
 		System.out.println(calculadora.somar());
