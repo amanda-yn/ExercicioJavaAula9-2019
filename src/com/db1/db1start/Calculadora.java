@@ -53,6 +53,7 @@ public class Calculadora {
 				contador++;
 			}
 		}
+		System.out.println("Quantidade de impares: " + contador);
 		return contador;
 	}
 	
@@ -67,19 +68,23 @@ public class Calculadora {
 	
 	public double menorValorEntreTresValores(Double numero1, Double numero2, Double numero3) {
 		if (numero1 < numero2 && numero1 < numero2) {
+			System.out.println(numero1);
 			return numero1;
 		}
 		else if (numero2 < numero1 && numero2 < numero3) {
+			System.out.println(numero2);
 			return numero2;
 		}
 		else if (numero3 < numero1 && numero3 < numero2) {
+			System.out.println(numero3);
 			return numero3;
 		}
 			return 0;
 	}
 	
 	public double mediaDeTresNumeros(Double numero1, Double numero2, Double numero3) {
-		Double media = ((numero1 + numero2 + numero3)/3);
+		Double media = (numero1 + numero2 + numero3)/3;
+		System.out.println(media);
 		return media;
 	}
 		

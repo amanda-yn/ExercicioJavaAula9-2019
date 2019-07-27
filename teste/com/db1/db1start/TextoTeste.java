@@ -23,7 +23,7 @@ public class TextoTeste {
 	}
 	
 	@Test
-	public void deveRetornarQuantidadeDeLetras() {
+	public void deveRetornarQuantidadeDeLetrasSemEspacos() {
 		Texto texto = new Texto(DB1START_SEM_ESPACO);
 		int quantidadeDeLetras = texto.quantidadeDeLetras();
 		Assert.assertEquals(8, quantidadeDeLetras); 
@@ -31,65 +31,65 @@ public class TextoTeste {
 	
 	@Test
 	public void deveRetornarQuantidadeDeLetrasComEspacos() {
-		Texto texto = new Texto(DB1START_COM_ESPACO);
-		int quantidadeDeLetras = texto.quantidadeDeLetrasComEspacos();
+		Texto textoComEspacos = new Texto(DB1START_COM_ESPACO);
+		int quantidadeDeLetras = textoComEspacos.quantidadeDeLetrasComEspacos();
 		Assert.assertEquals(10, quantidadeDeLetras); 
 	}
 	
 	@Test
-	public void deveRetornarMesmaQuantidadeDeLetras() {
+	public void deveRetornarMesmaQuantidadeDeLetrasDoTextoSemEspacos() {
 		Texto texto = new Texto(DB1START_COM_ESPACO);
-		int textoTemp2 = texto.mesmaQuantidadeDeLetras(DB1START_SEM_ESPACO, DB1START_COM_ESPACO);
-		Assert.assertEquals(DB1START_SEM_ESPACO.length(), textoTemp2);
+		int quantidadeDeLetras = texto.mesmaQuantidadeDeLetrasDoTextoSemEspacos(DB1START_SEM_ESPACO, DB1START_COM_ESPACO);
+		Assert.assertEquals(DB1START_SEM_ESPACO.length(), quantidadeDeLetras);
 	}
 	
 	@Test
-	public void deveExibirSomenteQuatroPrimeirasLetrasDoNome() {
+	public void deveRetornarSomenteAsQuatroPrimeirasLetrasDoNome() {
 		Texto texto = new Texto("Amanda Yukimi Narimatsu");
-		String quatroPrimeirasLetrasDoNome = texto.quatroPrimeirasLetrasDoNome();
+		String quatroPrimeirasLetrasDoNome = texto.exibirAsQuatroPrimeirasLetrasDoNome();
 		Assert.assertEquals("Aman", quatroPrimeirasLetrasDoNome); 
 	}
 	
 	@Test
-	public void deveExibirPartirDaTerceiraLetraDoNome() {
+	public void deveRetornarNomePartirDaTerceiraLetra() {
 		Texto texto = new Texto("Amanda Yukimi Narimatsu");
-		String terceiraLetraDoNome = texto.partirDaterceiraLetraDoNome();
-		Assert.assertEquals("nda Yukimi Narimatsu", terceiraLetraDoNome); 
+		String NomePartirDaTerceiraLetra = texto.exibirNomePartirDaterceiraLetra();
+		Assert.assertEquals("nda Yukimi Narimatsu", NomePartirDaTerceiraLetra); 
 	}
 	
 	@Test
 	public void deveExibirAsQuatroUltimasLetras() {
 		Texto texto = new Texto("Amanda Yukimi Narimatsu");
-		String quatroUltimasLetras = texto.quatroUltimasLetrasDoNome();
+		String quatroUltimasLetras = texto.exibirAsQuatroUltimasLetrasDoNome();
 		Assert.assertEquals("atsu", quatroUltimasLetras); 
 	}
 	
 	@Test
-	public void deveSubstituirPrimeiroNome() {
+	public void deveSubstituirPrimeiroNomePorAlunaOuAluno() {
 		Texto texto = new Texto("Amanda Yukimi Narimatsu");
-		String substituir = texto.substituirPrimeiroNome();
-		Assert.assertEquals("ALUNA Yukimi Narimatsu", substituir); 
+		String primeiroNomeSubstituido = texto.substituirPrimeiroNomePorAlunaOuAluno();
+		Assert.assertEquals("ALUNA Yukimi Narimatsu", primeiroNomeSubstituido); 
 	}
 	
 	@Test
-	public void deveExibirTextoSeparadamente() {
-		Texto texto = new Texto("banana maça melancia");
-		String[] separaString = texto.separandoTexto();
-		String[] textoEsperado = {"banana", "maça", "melancia"};
-		Assert.assertArrayEquals(textoEsperado, separaString); 
+	public void deveExibirTextoSeparado() {
+		Texto texto = new Texto("banana maca melancia");
+		String[] textoSeparado = texto.separarTexto();
+		String[] textoEsperado = {"banana", "maca", "melancia"};
+		Assert.assertArrayEquals(textoEsperado, textoSeparado); 
 	}
 	
 	@Test
-	public void exibirQuantidadeDeVogais() {
+	public void deveExibirQuantidadeDeVogais() {
 		Texto texto = new Texto("Curso DB1 Start");
-		int quantidadeDeVogais = texto.quantidadeDeVogais();
+		int quantidadeDeVogais = texto.quantidadeDeVogaisDoTexto();
 		Assert.assertEquals(3, quantidadeDeVogais); 
 	}
 	
 	@Test
-	public void exibirTextoInvertido() {
+	public void deveRetornarTextoInvertido() {
 		Texto texto = new Texto("Curso DB1 Start");
-		String textoInvertido = texto.textoInvertido();
+		String textoInvertido = texto.inverterTexto();
 		Assert.assertEquals("tratS 1BD osruC", textoInvertido); 
 	}
 }
