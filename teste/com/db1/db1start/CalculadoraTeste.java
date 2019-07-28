@@ -70,7 +70,7 @@ public class CalculadoraTeste {
 	@Test
 	public void deveRetornarMediaDeTresNumeros() { 						//Testando media de tres numeros
 		Double media = calculadora.mediaDeTresNumeros(25.5, 80.5, 45.6);
-		Assert.assertEquals(50.53, media, 0.01); 		//margem de erro: 00.01
+		Assert.assertEquals(50.53, media, 0.03); 		//margem de erro: 00.01
 	}
 	
 	@Test
