@@ -3,7 +3,7 @@ package com.db1.db1start;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TextoTeste {
+public class TextoTest {
 	
 	private static final String DB1START_SEM_ESPACO = "DB1START";
 	private static final String DB1START_COM_ESPACO = " DB1START ";
@@ -80,9 +80,9 @@ public class TextoTeste {
 	}
 	
 	@Test
-	public void deveExibirQuantidadeDeVogais() {
+	public void deveRetornarQuantidadeDeVogais() {
 		Texto texto = new Texto("Curso DB1 Start");
-		int quantidadeDeVogais = texto.quantidadeDeVogaisDoTexto();
+		int quantidadeDeVogais = texto.retornarQuantidadeDeVogaisDoTexto();
 		Assert.assertEquals(3, quantidadeDeVogais); 
 	}
 	
